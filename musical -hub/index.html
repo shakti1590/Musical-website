@@ -38,6 +38,48 @@
         </div>
       </div>
     </section>
+ <section class="screen">
+        <input type="checkbox" name="check" id="magicButton" value="None">
+        <label for="magicButton" class="main"></label>
+           <strong>music player
+</strong>
+        <div class="coverImage"></div>
+        <div class="search"></div>
+        <div class="bodyPlayer"></div>
+
+<audio preload id="audio" controls>
+            <source src="./public/assets/music.mp3">
+        </audio>
+
+        <table class="player">
+            <td><input type="checkbox"  id="backward" ><label for="backward" class="backward"></label></td>
+            <td><input type="checkbox"  id="play" title="Play" onclick="togglePlayPause()"><label for="play" class="play"></label></td>
+            <td><input type="checkbox"  id="forward"><label for="forward" class="forward"></label></td>
+        </table>
+
+        <table class="footer">
+            <td><input type="checkbox"  id="love" checked ><label for="love" class="love"></label></td>
+            <td><input type="checkbox"  id="repeat"  ><label for="repeat" class="repeat"></label></td>
+            <td><input type="checkbox"  id="shuffle" ><label for="shuffle" class="shuffle"></label></td>
+            <td><input type="checkbox"  id="options"  ><label for= "options" class="options"></label></td>
+        </table>
+
+        <div class="current"><h7>music</h7></div>
+    </section>
+    <script>
+        var audio = document.getElementById('audio');
+        var playpause = document.getElementById("play");
+
+        function togglePlayPause() {
+            if(audio.paused || audio.ended) {
+                playpause.title = "Pause";
+                audio.play();
+            } else {
+                playpause.title = "Play";
+                audio.pause();
+            }
+        }
+    </script>
 <section id='about'>
       <div id='about-elements'>
         <div id='about-text'>
@@ -51,6 +93,7 @@
         <img id='about-image' src="./public/assets/rafi1.jpg" alt="">
        </div>
     </section>
+  
 
     <section id='contact'>
       <div id="contact-bg-img"></div>

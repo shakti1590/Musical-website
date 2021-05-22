@@ -329,6 +329,259 @@ nav .logo-text {
   justify-content: center;
   align-items: center;
 }
+body {
+  background: rgb(255, 158, 158);
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.screen {
+  background-color: #fff;
+  padding: 0;
+  display: flex;
+  height: 550px;
+  width: 366px;
+  position: relative ;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin: 30px 0;
+  
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+label.main:before {
+  position: absolute;
+  top: 23px;
+  left: 23px;
+  font-family: FontAwesome;
+  content: '\f0c9';
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease-in;
+}
+.coverImage {
+  background: url('../assets/music1.jpg') center no-repeat;
+  background-size: cover;
+  width: 366px;
+  height: 366px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  transform-origin: 0% 0%;
+  transition: all 0.3s ease-in;
+}
+
+.screen > #magicButton:checked ~ .coverImage {
+  transform: scale(0.251, 0.251);
+  left: 23px;
+  top: 60px;
+  transition: all 0.3s ease-in;
+  border-radius: 20px;
+}
+
+.search:before {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  font-family: FontAwesome;
+  content: '\f002';
+  color: #959595;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease-in;
+}
+
+.search:hover:before {
+  color: #ff564c;
+}
+
+.bodyPlayer {
+  position: absolute;
+  top: 366px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 286px;
+  width: 366px;
+  background: #111;
+  transition: all 0.3s ease-in;
+}
+label.icons:before{
+  font-family: FontAwesome;
+  content: '\f08a';
+  color: #777;
+  font-size: 15px;
+  line-height: 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.15s linear;
+}
+
+.info{
+  position: absolute;
+  left: 95px;
+  top: 460px;
+  transition: all 0.3s ease-in;
+}
+.screen > #magicButton:checked ~ .info {
+  top: 66px;
+  left: 126px;
+  text-align: left;
+  transition: all 0.3s ease-in;
+}
+.screen > #magicButton:checked ~ .info h4{
+  margin-left: 0;
+  font-size: 16px;
+  color: #111111;
+  transition: all 0.3s ease-in;
+}
+.player{
+  background: none;
+  text-align: center;
+  font-family: FontAwesome;
+  color: #fff;
+  font-size: 26px;
+  line-height: 26px;
+  width: 216px;
+  height: 35px;
+  position: absolute;
+  bottom: 110px;
+  left: 48%;
+  transform: translate(-50%,0);
+  z-index: 10;
+  transition: all 0.3s ease-in;
+}
+.player td{
+  width: 72px;
+}
+.backward:before{
+  content: "\f04a";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.forward:before{
+  content:"\f04e";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.play:before{
+  content: "\f04b";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.backward:hover:before{
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+.play:hover:before{
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+.forward:hover:before{
+  color: #ff564c;
+  transition: all 0.15s linear;
+}
+td > #play:checked ~ label.play:before{
+  content: "\f04c";
+  transition: all 0.15s linear;
+}
+.screen > #magicButton:checked ~ .player{
+  bottom: 4px;
+  left: -44px;
+  transform: scale(0.45,0.45);
+  transition: all 0.3s ease-in;
+}
+.shadow{
+  background: rgba(17, 17, 17, 0.8);
+  width: 360px;
+  height: 50px;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  box-shadow: 0px -15px 40px rgba(17, 17, 17, 0.8);
+}
+.footer{
+  background: none;
+  font-family: FontAwesome;
+  color: #6d6d6d;
+  font-size: 15px;
+  line-height: 15px;
+  height: 45px;
+  width: 360px;
+  position: absolute;
+  bottom: 10px;
+  left: 23px;
+  z-index: 20;
+  transition: all 0.15s linear;
+  transition: bottom 0.3s linear;
+}
+.love:before{
+  content: "\f08a";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.shuffle:before{
+  content: "\f074";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.repeat:before{
+  content: "\f01e";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.options:before{
+  content: "\f141";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.love:hover:before{
+  color: #bbb;
+  transition: all 0.15s linear;
+}
+.shuffle:hover:before{
+  color: #bbb;
+  transition: all 0.15s linear;
+}
+.repeat:hover:before{
+  color: #bbb;
+  transition: all 0.15s linear;
+}
+.options:hover:before{
+  color: #bbb;
+  transition: all 0.15s linear;
+}
+
+.current{
+  position: fixed;
+  right: 23px;
+  bottom: -60px;
+  transition: all 0.3s ease-in;
+}
+.screen > #magicButton:checked ~ .current {
+  bottom: 17px;
+  transition: all 0.3s ease-in;
+}
+audio{
+  visibility: hidden;
+}
 
 /* Contact */
 .contact-wrapper {
@@ -403,7 +656,7 @@ nav .logo-text {
     height: 60px;
     align-items: center;
   }
-}
+
 
 @media screen and (max-width: 438px) {
   #cards-container {
